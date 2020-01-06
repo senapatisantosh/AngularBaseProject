@@ -8,7 +8,8 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "api:dotnetcore": "cd api/dotnet-core && dotnet restore && dotnet build && dotnet run"
     },
     "private": true,
     "dependencies": {

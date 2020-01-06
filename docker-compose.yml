@@ -1,0 +1,24 @@
+# Run docker-compose build
+# Run docker-compose up
+# Live long and prosper
+
+version: '3.1'
+
+services:
+
+  aspnet:
+    container_name: 'dotnetcoreapi'
+    image: 'dotnetcoreapi'
+    build:
+      context: ./api/dotnet-core
+      dockerfile: ./api/dotnet-core/.docker/dotnetcore.api.dockerfile
+    volumes:
+      - ./api/dotnet-core:/var/www/dotnetcore
+    ports:
+     - "5000:5000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

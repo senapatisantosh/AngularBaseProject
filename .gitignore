@@ -37,6 +37,11 @@ testem.log
 /e2e/*.js
 /e2e/*.map
 
+# api
+
+/api/dotnet-core/bin
+/api/dotnet-core/obj
+
 # System Files
 .DS_Store
 Thumbs.db
