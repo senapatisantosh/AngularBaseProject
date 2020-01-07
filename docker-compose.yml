@@ -5,13 +5,12 @@
 version: '3.1'
 
 services:
-
+  
   aspnet:
     container_name: 'dotnetcoreapi'
     image: 'dotnetcoreapi'
     build:
-      context: ./api/dotnet-core
-      dockerfile: ./api/dotnet-core/.docker/dotnetcore.api.dockerfile
+      context: api/dotnet-core
     volumes:
       - ./api/dotnet-core:/var/www/dotnetcore
     ports:
